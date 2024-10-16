@@ -14,13 +14,14 @@ const EmployeeList = ({ state, dispatch }) => {
     }
 
     return (
-        <div className='min-h-[400px] w-[300px] border shadow-lg rounded p-[10px]'>
+        <div className='min-h-[400px] w-[350px] border shadow-lg rounded p-[10px]'>
             <h1 className='text-lg font-semibold text-center'>Employee list</h1>
             <table className='w-full mt-[10px] border-collapse'>
                 <thead>
                     <tr>
                         <th className=' px-[10px] py-[5px] text-left'>Name</th>
                         <th className=' px-[10px] py-[5px] text-left'>ID</th>
+                        <th className=' px-[10px] py-[5px] text-left'>Age</th>
                         <th className=' px-[10px] py-[5px] text-right'>Action</th>
                     </tr>
                 </thead>
@@ -29,6 +30,7 @@ const EmployeeList = ({ state, dispatch }) => {
                         <tr key={item.id}>
                             <td className=' px-[10px] py-[5px]'>{item.first_name}</td>
                             <td className=' px-[10px] py-[5px]'>{item.id}</td>
+                            <td className=' px-[10px] py-[5px]'>{item.age}</td>
                             <td className=' px-[10px] py-[5px] text-right'>
                                 <button
                                     onClick={()=>handleAddBtn(item)}
